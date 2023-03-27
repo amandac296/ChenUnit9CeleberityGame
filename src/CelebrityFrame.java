@@ -8,7 +8,7 @@ import java.awt.*;
  * @version 2.1 17/09/2018
  */
 public class CelebrityFrame extends JFrame {
-	/**
+	/**hi
 	 * The instance of the panel used for playing the game.
 	 */
 	private CelebrityPanel gamePanel;
