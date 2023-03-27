@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83d70fac-6f8d-4aa4-a3cf-6a08d3cea4a4" name="Changes" comment="hi">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Unit9CeleberityGame.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Celebrity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CelebrityFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CelebrityGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CelebrityPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CelebrityRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StartPanel.java" afterDir="false" />
-    </list>
+    <list default="true" id="83d70fac-6f8d-4aa4-a3cf-6a08d3cea4a4" name="Changes" comment="hi" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,12 +19,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\student\IdeaProjects\Unit9CeleberityGame\src" />
@@ -66,6 +53,14 @@
       <option name="presentableId" value="Default" />
       <updated>1679924474973</updated>
     </task>
+    <task id="LOCAL-00001" summary="hi">
+      <created>1679926901059</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1679926901060</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -78,5 +73,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="hi" />
+    <option name="LAST_COMMIT_MESSAGE" value="hi" />
   </component>
 </project>
