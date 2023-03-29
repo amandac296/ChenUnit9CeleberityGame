@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Locale;
 
 /**
  * The framework for the Celebrity Game project
@@ -27,9 +26,9 @@ public class CelebrityGame {
 	 * Builds the game and starts the GUI
 	 */
 	public CelebrityGame() {
-		celebGameList = new ArrayList<>();
-		gameCelebrity = null;
+		celebGameList = new ArrayList<Celebrity>();
 		gameWindow = new CelebrityFrame(this);
+		gameCelebrity = null;
 	}
 
 	/**
@@ -41,9 +40,10 @@ public class CelebrityGame {
 	 *         spaces.
 	 */
 	public boolean processGuess(String guess) {
-		String lowerCase = guess.toLowerCase(Locale.ROOT);
-		String trim = lowerCase.trim();
-		if (trim.equals(gameCelebrity.getAnswer().toLowerCase())){
+		boolean matches = false;
+		String lowerTrimmedGuess = guess.trim().toLowerCase();  // TRIM!
+
+		if (lowerTrimmedGuess.equals(gameCelebrity.getAnswer().toLowerCase())) {
 			celebGameList.remove(0);
 			if (celebGameList.size() > 0) {
 				gameCelebrity = celebGameList.get(0);
@@ -51,8 +51,9 @@ public class CelebrityGame {
 				gameCelebrity = new Celebrity("", "");
 			}
 			return true;
+		} else {
+			return false;
 		}
-		return false; // stub
 	}
 
 	/**
@@ -61,7 +62,7 @@ public class CelebrityGame {
 	 * play screen.
 	 */
 	public void play() {
-		if (celebGameList != null && celebGameList.size() > 0){
+		if (celebGameList != null && celebGameList.size() > 0) {
 			gameCelebrity = celebGameList.get(0);
 			gameWindow.replaceScreen("GAME");
 		}
@@ -75,8 +76,8 @@ public class CelebrityGame {
 	 * @param type  What type of celebrity
 	 */
 	public void addCelebrity(String name, String clue, String type) {
-		Celebrity newCeleb = new Celebrity(name, clue);
-		celebGameList.add(newCeleb);
+		Celebrity celebrity = new Celebrity(name, clue);
+		celebGameList.add(celebrity);
 	}
 
 	/**
@@ -88,8 +89,9 @@ public class CelebrityGame {
 		String trimmedName = name.trim();
 		if (trimmedName.length() >= 4) {
 			return true;
+		} else {
+			return false;
 		}
-		return false; // stub
 	}
 
 	/**
@@ -100,10 +102,7 @@ public class CelebrityGame {
 	 */
 	public boolean validateClue(String clue, String type) {
 		String trimmedClue = clue.trim();
-		if (trimmedClue.length() >= 10){
-			return true;
-		}
-		return false; // stub
+		return trimmedClue.length() >= 10;
 	}
 
 	/**
@@ -112,16 +111,26 @@ public class CelebrityGame {
 	 * @return Remaining number of celebrities
 	 */
 	public int getCelebrityGameSize() {
-		return celebGameList.size();  // stub
+		return celebGameList.size();
 	}
 
 	/**
 	 * Accessor method for the games clue to maintain low coupling between
 	 * classes
-	 *
+	 * 
 	 * @return The String clue from the current celebrity.
 	 */
 	public String sendClue() {
-		return gameCelebrity.getClue(); // stub
+		return gameCelebrity.getClue();
+	}
+
+	/**
+	 * Accessor method for the games answer to maintain low coupling between
+	 * classes
+	 * 
+	 * @return The String answer from the current celebrity.
+	 */
+	public String sendAnswer() {
+		return null; // stub
 	}
 }

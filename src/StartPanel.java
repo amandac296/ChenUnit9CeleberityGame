@@ -15,7 +15,7 @@ import javax.swing.SpringLayout;
  * @author cody.henrichsen
  * @version 2.1 18/09/2018 Refactored away validation to controller.
  */
-public class StartPanel extends JPanel implements ActionListener{
+public class StartPanel extends JPanel implements ActionListener {
   /**
    * Reference to the Game to call methods.
    */
@@ -117,7 +117,6 @@ public class StartPanel extends JPanel implements ActionListener{
     setupPanel();
     setupLayout();
     setupListeners();
-
   }
   
   /**
@@ -178,12 +177,14 @@ public class StartPanel extends JPanel implements ActionListener{
     startButton.addActionListener(this);
   }
 
+  // interface method: gets called whenever a component with an
+  // ActionListener attached get clicked
   public void actionPerformed(ActionEvent ae) {
     Object source = ae.getSource();
     JButton clickedButton = (JButton) source;
     String buttonText = clickedButton.getText();
 
-    if (buttonText.equals ("Add current celebrity")){
+    if (buttonText.equals("Add current celebrity")) {
       // when "add celebrity" button gets clicked:
       answerField.setBackground(Color.WHITE);
       clueField.setBackground(Color.WHITE);
@@ -194,11 +195,12 @@ public class StartPanel extends JPanel implements ActionListener{
       }
       celebrityCount = controller.getCelebrityGameSize();
       celebrityCountLabel.setText(countLabelText + celebrityCount);
-    } else if (startButton.equals("Start Celebrity Game")) {
+    } else if (buttonText.equals("Start Celebrity game")) {
+      // call play method when start button is clicked
       controller.play();
+
     }
   }
-
 
   /**
    * Validation method for the text to create a Celebrity object.

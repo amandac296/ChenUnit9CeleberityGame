@@ -1,6 +1,7 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import java.awt.*;
+import java.awt.CardLayout;
+import java.awt.LayoutManager;
 
 /**
  * GUI Frame class for the Celebrity Game
@@ -40,7 +41,6 @@ public class CelebrityFrame extends JFrame {
 		gamePanel = new CelebrityPanel(controller);
 		startPanel = new StartPanel(controller);
 		setupFrame();
-
 	}
 	
 	/**
@@ -49,8 +49,8 @@ public class CelebrityFrame extends JFrame {
 	private void setupFrame() {
 		// the following are methods INHERITED from JFrame that we can call since
 		// CelebrityFrame is a subclass of JFrame
-		setSize(1000, 800);  // (window width, window height)
-		setTitle("Guess the Celebrity");
+		setSize(800, 500);  // (window width, window height)
+		setTitle("Celebrity Game");
 		add(panelCards);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

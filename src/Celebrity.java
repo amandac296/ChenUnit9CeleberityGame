@@ -57,12 +57,10 @@ public class Celebrity {
 	}
 
 	/**
-	 * provides a String representation of the Celebrity.
+	 * Provides a String representation of the Celebrity.
 	 */
-
 	@Override
-	public String toString(){
-		return "The Celebrity's name is: " + answer + ". The clue for this celebrity is: " + clue + ".";
+	public String toString() {
+		return "The Celebrity's name is: " + answer + ". The clue for this celebrity is: " + clue;
 	}
 }
-
