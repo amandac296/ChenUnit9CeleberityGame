@@ -46,7 +46,7 @@ public class CelebrityFrame extends JFrame {
 	/**
 	 * Configures the JFrame window subclass to add the panel and set size based information.
 	 */
-	private void setupFrame() {
+	public void setupFrame() {
 		// the following are methods INHERITED from JFrame that we can call since
 		// CelebrityFrame is a subclass of JFrame
 		setSize(800, 500);  // (window width, window height)

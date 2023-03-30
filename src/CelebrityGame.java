@@ -1,4 +1,6 @@
+import javax.swing.*;
 import java.util.ArrayList;
+import java.awt.*;
 
 /**
  * The framework for the Celebrity Game project
@@ -66,6 +68,12 @@ public class CelebrityGame {
 			gameCelebrity = celebGameList.get(0);
 			gameWindow.replaceScreen("GAME");
 		}
+	}
+
+	public void reset() {
+		gameWindow.dispose();
+		gameWindow = new CelebrityFrame(this);
+		celebGameList.clear();
 	}
 
 	/**
